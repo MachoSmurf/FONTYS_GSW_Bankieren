@@ -1,7 +1,5 @@
 package com.github.machosmurf.gswbankieren.bank.account;
 
-import com.github.machosmurf.gswbankieren.bank.Account;
-
 import java.util.Collection;
 
 /**
