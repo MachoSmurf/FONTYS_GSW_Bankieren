@@ -55,4 +55,10 @@ public interface IBankForClient {
      * @return Collection of transactions
      */
     Collection<Transaction> findTransactions(String accountTo, String accountsFrom, Date from, Date to);
+
+    /**
+     * Gets the accounts associated by the user of this session
+     * @return returns a collection of accounts
+     */
+    Collection<Account> getAccounts();
 }

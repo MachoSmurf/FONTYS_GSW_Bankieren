@@ -16,9 +16,9 @@ public interface ICentralForBank {
      * logs a bank into the system so it can do transfers
      * @param bankId id of the bank
      * @param bankPassword password of the bank
-     * @return boolean whether the login was succesfull
+     * @return String Authentication Key to be used in transfers from central to bank
      */
-    public boolean login(String bankId, String bankPassword);
+    public String login(String bankId, String bankPassword);
 
     /**
      * logs a bank out so no transfers can be made any longer
