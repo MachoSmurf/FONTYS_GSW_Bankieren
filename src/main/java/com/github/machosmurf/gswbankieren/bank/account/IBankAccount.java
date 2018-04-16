@@ -7,7 +7,7 @@ import java.util.Date;
 /**
  * Exposes account information and methods to the main controller
  */
-public interface IBankRekening {
+public interface IBankAccount {
     /**
      * Gets the saldo for this users session
      * @return double saldo for this user
