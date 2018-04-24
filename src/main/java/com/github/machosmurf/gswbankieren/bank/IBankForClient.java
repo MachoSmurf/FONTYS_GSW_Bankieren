@@ -1,8 +1,8 @@
 package com.github.machosmurf.gswbankieren.bank;
 
 import com.github.machosmurf.gswbankieren.bank.account.Account;
+import com.github.machosmurf.gswbankieren.shared.Transaction;
 
-import javax.transaction.Transaction;
 import java.util.Collection;
 import java.util.Date;
 
@@ -25,12 +25,10 @@ public interface IBankForClient {
 
     /**
      * transfers money from one account to another
-     * @param accountFrom String accountFrom
-     * @param accountTo String accountTo
-     * @param ammount double ammount of money
+     * @param transaction transaction that needs to be send
      * @return boolean of propper receive
      */
-    boolean transfer(String accountFrom, String accountTo, double ammount);
+    boolean transfer(Transaction transaction);
 
     /**
      * Finds transactions matching a bracket of dates

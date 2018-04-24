@@ -16,12 +16,10 @@ public interface IBankAccount {
 
     /**
      * transfers money from one account to another
-     * @param accountFrom String the account from
-     * @param accountTo String the account to
-     * @param ammount double ammount
+     * @param transaction Transaction object that needs to be transfered
      * @return boolean whether successful
      */
-    boolean transfer(String accountFrom, String accountTo, double ammount);
+    boolean transfer(Transaction transaction);
 
     /**
      * Finds transactions matching a bracket of dates
