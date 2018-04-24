@@ -11,4 +11,13 @@ public class RestApi {
     public RestApi(BankController bankController) {
         this.bankController = bankController;
     }
+
+    /**
+     * REST ENDPOINTS BANK TO CENTRAL
+     * ----------------------------------------------
+     * | Endpoint           | Method                |
+     * ----------------------------------------------
+     * | /transaction       | POST                  |
+     * ----------------------------------------------
+     */
 }

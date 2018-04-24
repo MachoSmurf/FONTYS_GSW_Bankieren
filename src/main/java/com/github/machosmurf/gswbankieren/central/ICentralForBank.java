@@ -10,7 +10,7 @@ public interface ICentralForBank {
      * Fetches all known banks and their status, including info nessecairy for other banks
      * @return Collections of Banks
      */
-    public Collection<Bank> getBanken();
+    public Collection<CentralController> getBanken();
 
     /**
      * logs a bank into the system so it can do transfers
