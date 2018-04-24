@@ -12,4 +12,9 @@ public class UserController {
     public UserController(UserRepository userRepository){
         this.userRepository = userRepository;
     }
+
+    public User addUser(){
+        //TODO check if user allready exists, based on name/city combo And username
+        return null;
+    }
 }
