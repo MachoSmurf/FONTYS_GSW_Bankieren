@@ -26,11 +26,34 @@ public class Transaction {
                        Account accountFrom,
                        Account accountTo,
                        Date date,
-                       String description){
+                       String description) throws TransactionNegativeException {
+        if (amount <= 0){
+            throw new TransactionNegativeException();
+        }
         this.amount = amount;
         this.accountFrom = accountFrom;
         this.accountTo = accountTo;
         this.date = date;
         this.description = description;
+    }
+
+    public Account getAccountFrom() {
+        return accountFrom;
+    }
+
+    public Account getAccountTo() {
+        return accountTo;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Date getDate() {
+        return date;
     }
 }
