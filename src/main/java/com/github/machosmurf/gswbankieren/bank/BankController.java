@@ -2,9 +2,9 @@ package com.github.machosmurf.gswbankieren.bank;
 
 import com.github.machosmurf.gswbankieren.bank.account.Account;
 import com.github.machosmurf.gswbankieren.bank.user.UserController;
+import com.github.machosmurf.gswbankieren.shared.Transaction;
 import org.springframework.stereotype.Component;
 
-import javax.transaction.Transaction;
 import java.util.Collection;
 import java.util.Date;
 
@@ -18,7 +18,7 @@ public class BankController implements IBankForCentral, IBankForClient {
     }
 
     @Override
-    public boolean transfer(String authKey, String accountFrom, String accountTo, double ammount) {
+    public boolean transfer(String authenticationKey, String accountFrom, String accountTo, double ammount) {
         return false;
     }
 
@@ -32,8 +32,14 @@ public class BankController implements IBankForCentral, IBankForClient {
 
     }
 
+    /**
+     * transfers money from one account to another
+     *
+     * @param transaction transaction that needs to be send
+     * @return boolean of propper receive
+     */
     @Override
-    public boolean transfer(String accountFrom, String accountTo, double ammount) {
+    public boolean transfer(Transaction transaction) {
         return false;
     }
 
