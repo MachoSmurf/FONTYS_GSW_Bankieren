@@ -32,29 +32,32 @@ public interface IBankForClient {
 
     /**
      * Finds transactions matching a bracket of dates
+     * @param account The account to search transactions for
      * @param from Date from
      * @param to Date to
      * @return Collection of transactions
      */
-    Collection<Transaction> findTransactions(Date from, Date to);
+    Collection<Transaction> findTransactions(Account account, Date from, Date to);
 
     /**
      * Finds transactions matching params
+     * @param account The account to search transactions for
      * @param accountTo Account from
      * @param accountsFrom Account to
      * @return Collection of transactions
      */
-    Collection<Transaction> findTransactions(String accountTo, String accountsFrom);
+    Collection<Transaction> findTransactions(Account account, String accountTo, String accountsFrom);
 
     /**
      * Finds transactions matching accounts and date brackets
+     * @param account The account to search transactions for
      * @param accountTo String account to
      * @param accountsFrom String account from
      * @param from Date from
      * @param to Date to
      * @return Collection of transactions
      */
-    Collection<Transaction> findTransactions(String accountTo, String accountsFrom, Date from, Date to);
+    Collection<Transaction> findTransactions(Account account, String accountTo, String accountsFrom, Date from, Date to);
 
     /**
      * Gets the accounts associated by the user of this session
