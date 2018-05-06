@@ -84,3 +84,6 @@ buildNumber.properties
 
 
 # End of https://www.gitignore.io/api/maven,intellij+all
+
+#ignore changes to resources so debugging can happen of different db's
+src/main/resources/application.properties
