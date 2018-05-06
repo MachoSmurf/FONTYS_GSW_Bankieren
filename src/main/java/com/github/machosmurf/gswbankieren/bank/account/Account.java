@@ -9,6 +9,7 @@ import java.util.Random;
 import java.util.Set;
 
 @Entity
+@Table(name = "account")
 public class Account {
 
     @Id
@@ -18,8 +19,8 @@ public class Account {
     /*@ManyToOne
     private User accountOwner;*/
     private double credit;
-    @OneToMany(mappedBy = "accountFrom", targetEntity = Transaction.class)
-    private Set<Transaction> transactions;
+    @OneToMany(cascade = CascadeType.ALL, mappedBy = "accountFrom", targetEntity = com.github.machosmurf.gswbankieren.shared.Transaction.class)
+    private Set<Transaction> transactions = new HashSet<>();
 
     public Account() {
     } //JPA Constructor

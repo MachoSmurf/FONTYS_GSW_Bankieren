@@ -6,13 +6,14 @@ import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "transction")
 public class Transaction {
 
     @Id
     @GeneratedValue
-    private int transactionId;
+    private int id;
     private double amount;
-    @ManyToOne(targetEntity = Account.class)
+    @ManyToOne
     @JoinColumn(name = "account_id")
     private Account accountFrom;
     /*@ManyToOne
