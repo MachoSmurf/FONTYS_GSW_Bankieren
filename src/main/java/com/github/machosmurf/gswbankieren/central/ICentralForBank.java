@@ -11,7 +11,7 @@ public interface ICentralForBank {
      * @param authenticationkey The key that identifies the connection between bank and central
      * @return Collections of Banks
      */
-    public Collection<CentralController> getBanken(String authenticationkey);
+    public Collection<BankEntity> getBanken(String authenticationkey);
 
     /**
      * logs a bank into the system so it can do transfers

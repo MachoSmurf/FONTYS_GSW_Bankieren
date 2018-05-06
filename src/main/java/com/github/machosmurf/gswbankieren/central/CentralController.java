@@ -11,7 +11,7 @@ public class CentralController implements ICentralForBank {
      * @return Collections of Banks
      */
     @Override
-    public Collection<CentralController> getBanken(String authenticationkey) {
+    public Collection<BankEntity> getBanken(String authenticationkey) {
         return null;
     }
 
