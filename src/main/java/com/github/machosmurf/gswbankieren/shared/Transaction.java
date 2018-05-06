@@ -2,9 +2,7 @@ package com.github.machosmurf.gswbankieren.shared;
 
 import com.github.machosmurf.gswbankieren.bank.account.Account;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
@@ -14,8 +12,12 @@ public class Transaction {
     @GeneratedValue
     private int transactionId;
     private double amount;
+    @ManyToOne(targetEntity = Account.class)
+    @JoinColumn(name = "account_id")
     private Account accountFrom;
-    private Account accountTo;
+    /*@ManyToOne
+    @JoinColumn(name = "user_id")*/
+    //private Account accountTo;
     private Date date;
     private String description;
 
@@ -32,7 +34,7 @@ public class Transaction {
         }
         this.amount = amount;
         this.accountFrom = accountFrom;
-        this.accountTo = accountTo;
+        //this.accountTo = accountTo;
         this.date = date;
         this.description = description;
     }
@@ -42,7 +44,8 @@ public class Transaction {
     }
 
     public Account getAccountTo() {
-        return accountTo;
+        //return accountTo;
+        return null;
     }
 
     public double getAmount() {

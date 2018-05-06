@@ -3,7 +3,7 @@ package com.github.machosmurf.gswbankieren.bank.account;
 import com.github.machosmurf.gswbankieren.bank.user.User;
 import com.github.machosmurf.gswbankieren.shared.Transaction;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.HashSet;
 import java.util.Random;
 import java.util.Set;
@@ -11,9 +11,14 @@ import java.util.Set;
 @Entity
 public class Account {
 
+    @Id
+    @GeneratedValue
+    private int id;
     private String accountNumber;
-    private User accountOwner;
+    /*@ManyToOne
+    private User accountOwner;*/
     private double credit;
+    @OneToMany(mappedBy = "accountFrom", targetEntity = Transaction.class)
     private Set<Transaction> transactions;
 
     public Account() {
@@ -21,7 +26,7 @@ public class Account {
 
     public Account(String bankID, User accountOwner) {
         credit = 100;
-        this.accountOwner = accountOwner;
+        //this.accountOwner = accountOwner;
         this.accountNumber = generateAccountNumber(bankID);
         transactions = new HashSet<>();
     }

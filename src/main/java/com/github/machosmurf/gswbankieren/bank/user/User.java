@@ -3,11 +3,15 @@ package com.github.machosmurf.gswbankieren.bank.user;
 import org.springframework.security.crypto.bcrypt.BCrypt;
 
 import javax.persistence.Entity;
-import java.util.Random;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
 
 @Entity
 public class User {
 
+    @Id
+    @GeneratedValue
+    private int id;
     private String name;
     private String city;
     private String loginName;
