@@ -4,6 +4,8 @@ package com.github.machosmurf.gswbankieren.bank;
  * Specifies endpoints to expose to central via central
  */
 public interface IBankForCentral {
+
+    //TODO: onderstaande vervangen door transactie object
     /**
      * gets a transaction from central to this bank
      * @param authenticationKey String that identifies the central

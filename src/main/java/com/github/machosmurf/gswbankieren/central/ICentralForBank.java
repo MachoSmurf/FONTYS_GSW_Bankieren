@@ -27,6 +27,7 @@ public interface ICentralForBank {
      */
     public void logout(String authenticationKey);
 
+    //TODO: onderstaande vervangen door Transactie object
     /**
      * transfers money between to banks
      * @param authenticationKey The key that identifies the connection between bank and central
